@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+        <suite name="Regression2">
+    <listeners>
+        <listener class-name="Util.ExtentReporterNG" />
+    </listeners>
+
+    <test name="operations_portal_ui_regression" parallel="none">
+            <classes>
+                <class name="OperationPortalDataIntegrityDashboardTest">
+                    <methods>
+                        <include name="simpleSearchDisplaysExpectedResults"/>
+                        <include name="advancedSearchDisplaysExpectedResults"/>
+                    </methods>
+                </class> <!-- OperationPortalDataIntegrityDashboardTest -->
+                <class name="OperationPortalInitiateConfigurationTest">
+                    <methods>
+                        <include name="initiateStereoConfiguration"/>
+                    </methods>
+                </class> <!-- OperationPortalDataIntegrityDashboardTest -->
+            </classes>
+    </test> <!-- operations_portal_ui_regression -->
+
+    </suite> <!-- Default Suite -->

@@ -1,0 +1,15 @@
+DECLARE
+CURSOR last_id 
+    IS
+    SELECT BB_MSG_ID FROM TB_BOARD_MSG WHERE ROWNUM <=20 ORDER BY BB_MSG_ID DESC;
+msg_id number(11);
+
+BEGIN
+OPEN last_id;
+LOOP
+    FETCH last_id INTO msg_id;
+       EXIT WHEN last_id%NOTFOUND;
+       DELETE FROM TB_BOARD_MSG WHERE BB_MSG_ID = msg_id;
+       COMMIT;
+  END LOOP;
+END; 

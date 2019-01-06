@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestAllSuites">
+    <listeners>
+        <listener class-name="Util.ExtentReporterNG" />
+    </listeners>
+
+    <suite-files>
+        <suite-file path="./Regression1.xml" />
+        <suite-file path="./Regression2.xml" />
+    </suite-files>
+</suite> <!-- Default Suite -->
